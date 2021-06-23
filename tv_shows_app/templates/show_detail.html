@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} Read (One){% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row text-end mt-2">
+        <a href="/">Go Back</a>
+    </div>
+    <div class="row">
+        <h2>TV Show {{show.id}}</h2>
+    </div>
+    <div class="row mt-4">
+        <h4>Title: {{show.title}}</h4>
+        <h4>Network: {{show.network}}</h4>
+        <h4>Release Date: {{show.release_date}}</h4>
+        <h4>Description: {{show.description}}</h4>
+        <h4>Last Updated: {{show.updated_at}}</h4>
+    </div>
+    <div class="row mt-4">
+        <div class="col-1 text-end">
+            <a href="{{show.id}}/edit">Edit</a>
+        </div>
+|
+        <div class="col-1 text-start">
+            <a href="{{show.id}}/destroy" method="POST">Delete</a>
+        </div>    
+    </div>
+</div>
+{% endblock %}
