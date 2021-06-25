@@ -11,6 +11,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
     {% load static %}
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/toastr.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
@@ -20,12 +21,12 @@
             toastr.options = {
                 "closeButton": true,
                 "debug": false,
-                "newestOnTop": true,
+                "newestOnTop": false,
                 "progressBar": true,
                 "positionClass": "toast-bottom-left",
                 "preventDuplicates": false,
                 "onclick": null,
-                "showDuration": "300",
+                "showDuration": "500",
                 "hideDuration": "1000",
                 "timeOut": "5000",
                 "extendedTimeOut": "1000",
@@ -41,7 +42,7 @@
                     {% endfor %}
                 {% endif %}
 
-                {% block libreto %} {% endblock %}
+                {% block script %} {% endblock %}
         });
     </script>
 </head>
