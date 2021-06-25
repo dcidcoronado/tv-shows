@@ -3,28 +3,26 @@
 {% block title %} Read (One){% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row text-end mt-2">
-        <a href="/">Go Back</a>
+<div class="row text-end mt-2">
+    <a class="text-primary text-decoration-none" href="/"><i class="bi bi-arrow-left-square"></i> Go Back</a>
+</div>
+<div class="row">
+    <h2>TV Show {{show.id}}</h2>
+</div>
+<div class="row mt-4">
+    <h4>Title: {{show.title}}</h4>
+    <h4>Network: {{show.network}}</h4>
+    <h4>Release Date: {{show.release_date}}</h4>
+    <h4>Description: {{show.description}}</h4>
+    <h4>Last Updated: {{show.updated_at}}</h4>
+</div>
+<div class="row mt-4">
+    <div class="col-1 text-end">
+        <a class="text-primary text-decoration-none" href="{{show.id}}/edit"><i class="bi bi-pencil text-primary"></i> Edit</a>
     </div>
-    <div class="row">
-        <h2>TV Show {{show.id}}</h2>
-    </div>
-    <div class="row mt-4">
-        <h4>Title: {{show.title}}</h4>
-        <h4>Network: {{show.network}}</h4>
-        <h4>Release Date: {{show.release_date}}</h4>
-        <h4>Description: {{show.description}}</h4>
-        <h4>Last Updated: {{show.updated_at}}</h4>
-    </div>
-    <div class="row mt-4">
-        <div class="col-1 text-end">
-            <a href="{{show.id}}/edit">Edit</a>
-        </div>
 |
-        <div class="col-1 text-start">
-            <a href="{{show.id}}/destroy" method="POST">Delete</a>
-        </div>    
-    </div>
+    <div class="col-1 text-start">
+        <a class="text-primary text-decoration-none" href="{{show.id}}/destroy" method="POST"><i class="bi bi-trash text-primary"> </i>Delete</a>
+    </div>    
 </div>
 {% endblock %}
