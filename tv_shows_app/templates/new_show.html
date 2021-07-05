@@ -6,29 +6,31 @@
 <div class="row text-end mt-2">
     <a class="text-primary text-decoration-none" href="/"><i class="bi bi-arrow-left-square"></i> Go TV Shows</a>
 </div>
-<div class="row col-6 offset-3">
-    <h2>All Shows</h2>
-    <form class="mt-3 row" method="POST" action="create">
-        {% csrf_token %}
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input name="title" type="text" class="form-control" id="title">
-        </div>
-        <div class="mb-3 col-6">
-            <label for="network" class="form-label">Network</label>
-            <input name="network" type="text" class="form-control" id="network">
-        </div>
-        <div class="mb-3 col-6">
-            <label for="date" class="form-label">Release Date</label>
-            <input name="date" name="date" type="date" class="form-control" id="date">
-        </div>
-        <div class="mb-3 form-group">
-            <label class="form-label" for="description">Description</label>
-            <textarea name="description" class="form-control" name="description" id="description" cols="30" rows="5"></textarea>
-        </div>
-        <div class="text-center">
-            <button type="submit" class="btn btn-primary text-center">Create</button>
-        </div>
-    </form> 
+<div class="row">
+    <div class="col-6 offset-3">
+        <h2>All Shows</h2>
+        <form class="mt-3 row" method="POST" action="create">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input name="title" type="text" class="form-control" id="title">
+            </div>
+            <div class="mb-3 col-6">
+                <label for="network" class="form-label">Network</label>
+                <input name="network" type="text" class="form-control" id="network">
+            </div>
+            <div class="mb-3 col-6">
+                <label for="date" class="form-label">Release Date</label>
+                <input name="date" name="date" type="date" class="form-control" id="date">
+            </div>
+            <div class="mb-3 form-group">
+                <label class="form-label" for="description">Description</label>
+                <textarea name="description" class="form-control" name="description" id="description" cols="30" rows="5"></textarea>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary text-center">Create</button>
+            </div>
+        </form> 
+    </div>
 </div>
 {% endblock %}
